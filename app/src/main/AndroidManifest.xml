@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.amolloang">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/egg"
+        android:label="아몰랑"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Activity.RandomDiaryActivity">
+
+        </activity>
+        <activity android:name=".Activity.AlarmActivity" />
+        <activity android:name=".Activity.ForgetPinActivity" />
+        <activity android:name=".Activity.LockQuestionActivity" />
+        <activity android:name=".Activity.PinLockSettingActivity" />
+        <activity android:name=".Activity.CenterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.PinLockActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3373631751790184~2235685483" />
+
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.DiaryWriteActivity" />
+        <activity android:name=".Activity.DiaryListActivity" />
+
+        <receiver
+            android:name=".Alarm.DeviceBootReceiver"
+            android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Alarm.AlarmReceiver" />
+    </application>
+
+</manifest>

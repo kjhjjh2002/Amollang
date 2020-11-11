@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_height="100dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:backgroundTint="#FF9335">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:layout_width="86dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/diary_year_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2020"
+            android:fontFamily="@font/font"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/diary_date_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="11/08"
+            android:fontFamily="@font/font"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="195dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/diary_title_textView"
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="일기 제목"
+            android:fontFamily="@font/font"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/diary_image_textView"
+        android:layout_width="110dp"
+        android:layout_height="match_parent" />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

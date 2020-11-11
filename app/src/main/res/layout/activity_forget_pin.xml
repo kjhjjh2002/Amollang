@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ForgetPinActivity">
+
+    <Button
+        android:id="@+id/forget_pin_back_button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toTopOf="@+id/diary_listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forget_pin_back_button"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/forget_pin_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/font"
+            android:text="보안질문에 대한 답을 써주세요"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/mainColor"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/forget_pin_question_textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:background="@color/noColor"
+                android:gravity="center_vertical"
+                android:text="Q."
+                android:fontFamily="@font/font"
+                android:textSize="25sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/mainColor"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/forget_pin_answer_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:hint="답을 입력하세요"
+                android:fontFamily="@font/font"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:background="@color/noColor"
+                android:textSize="25sp"/>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/forget_pin_ok_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="확인"
+            android:textStyle="bold"
+            android:fontFamily="@font/font"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/mainColor"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

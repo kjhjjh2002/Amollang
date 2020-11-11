@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CenterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/center_Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#FF9355"
+        app:titleTextAppearance="@style/TitleBarTextAppearance"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="전에 썼던 일기를 하나 뽑았어요!"
+        android:fontFamily="@font/font"
+        app:layout_constraintBottom_toTopOf="@id/rand_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/mainColor"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rand_Button"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:backgroundTint="#FF9335"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302">
+
+        <TextView
+            android:id="@+id/rand_textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="test"
+            android:fontFamily="@font/font"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diary_add_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="591dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="#FF9335"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:maxImageSize="50dp"
+        app:fabCustomSize="70dp"
+        app:pressedTranslationZ="1dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/diary_list_button"
+        android:layout_width="45dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/diary_add_button"
+        android:backgroundTint="#FF9335"
+        android:src="@drawable/list"
+        app:fabCustomSize="45dp"
+        app:borderWidth="0dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/user_profile_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#FF9335"
+        app:borderWidth="0dp"
+        android:src="@drawable/user"
+        app:fabCustomSize="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/diary_add_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/diary_add_button"
+        app:layout_constraintTop_toBottomOf="@id/rand_Button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/activity_center_drawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>
